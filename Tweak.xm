@@ -112,4 +112,12 @@ else {
 
 }
 %end
+%hook AddressTextField
+-(BOOL)becomeFirstResponder {
+    [self setKeyboardType:UIKeyboardTypeDefault];
+    return %orig;
+    
+}
+
+%end 
 
